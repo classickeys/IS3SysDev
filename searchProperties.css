@@ -1,0 +1,423 @@
+/* Import Inter Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/gotham-6");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap");
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Nav Bar Background */
+nav {
+  font-family: "Inter", sans-serif;
+}
+
+/* footer element */
+footer {
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  list-style-type: none;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: #213644;
+}
+
+.nyeredzi{
+  position: relative;
+  width: 1.1em;
+  font-size: 25px;
+  color: #c6ab7c;
+  cursor: pointer;
+
+}
+
+/* footer paragragh */
+footer p {
+  height: 30px;
+  padding-top: 1%;
+  font-weight: 200;
+  background-color: #213644;
+  text-align: center;
+  width: auto;
+  border-radius: 20px;
+  color: white;
+  position: relative;
+  font-size: 12px;
+}
+
+/* links in footer */
+footer small a {
+  margin-right: 50px;
+  top: 50%;
+  font-size: 12px;
+}
+
+/*FOOTER LINK CODE*/
+/* unvisited link */
+footer small a:link {
+  color: #213644;
+}
+/* visited link */
+footer small a:visited {
+  color: black;
+}
+/* mouse over link */
+footer small a:hover {
+  color: #c6ab7c;
+  font-size: 13px;
+}
+/* selected link */
+footer small a:active {
+  color: #213644;
+}
+
+/* navbar  */
+nav ul {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  list-style-type: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  background-color: #213644;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.8s ease;
+  opacity: 1;
+  z-index: 1000;
+}
+/* scroling effect */
+#navbar.hidden {
+  opacity: 0; /* Hidden */
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+
+/* all links in nav bar */
+nav a {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 13px;
+  text-align: center;
+}
+
+/* left section with home button */
+.left a {
+  width: auto;
+  position: relative;
+  transform: none;
+}
+
+/* Centered section inside the top navigation */
+
+.searchContainer {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+}
+
+.searchInput {
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 13px;
+  outline: none;
+  background-color: #c6ab7c;
+  color: #213644;
+  transition: background-color 0.3s ease;
+  display: none;
+  vertical-align: middle;
+
+  text-align: center;
+}
+
+.searchInput:hover {
+  background-color: #213644;
+  color: #867455;
+  border-radius: 13px;
+  border-color: #c6ab7c;
+  border-width: 2px;
+  border-style: solid;
+}
+.center {
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100%; /* Make sure it takes up the full height of the navbar */
+}
+
+.center a {
+  position: relative;
+  transform: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  justify-content: center;
+  vertical-align: middle;
+  margin: 0;
+}
+
+/* the image inside the search box */
+.center a img {
+  margin-left: auto;
+}
+
+/* home image */
+#home {
+  object-fit: contain;
+  position: fixed;
+  width: fit-content;
+}
+
+/* the search button area */
+.searchBtn {
+  background-color: #c6ab7c;
+  border-radius: 13px;
+  height: 20px;
+  width: auto;
+  max-width: 400px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #213644;
+  display: inline-block;
+}
+
+/* search button hover */
+.searchBtn:hover,
+.navBtn:hover {
+  background-color: #213644;
+  border-radius: 13px;
+  color: #867455;
+  border-color: #c6ab7c;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* hover on search button */
+.searchBtn:hover {
+  #search_icon {
+    content: url(./images/icons/searchH.png);
+  }
+}
+
+/* hover on home image button */
+#homeBtn:hover {
+  #home_png {
+    border-color: #c6ab7c;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+  }
+}
+
+/* filters section
+ */
+.filter_container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 5%;
+}
+
+.filter {
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+  white-space: nowrap; /* Prevent items from wrapping */
+  padding: 10px 0; /* Add padding to top and bottom */
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center;
+}
+/* filter .carousel-container */
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  justify-content: flex-start;
+  margin-top: 1%;
+  white-space: nowrap;
+  padding: 15px 0;
+}
+
+/* filter carousel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  flex-wrap: nowrap;
+  margin-right: 5px;
+}
+
+.carousel-item {
+  font-family: "Hind" sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7px;
+  min-width: 70px;
+  background-color: rgb(255, 255, 255, 0.4);
+  margin-right: 5px;
+  border-radius: 15px;
+  color: #213644;
+}
+
+.carousel a :hover {
+  background-color: rgba(255, 255, 255, 0.068);
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.filter a {
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.carousel-item p {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+#carousel-filter {
+  width: auto;
+  padding: 20px 24px;
+  margin-bottom: 0px;
+  flex-direction: row;
+  font-size: 12px;
+}
+
+#carousel-filter img {
+  margin-left: auto;
+}
+/* all Properties column  */
+
+/* All Properties Section */
+.all-properties {
+  width: calc(100% - 200px);
+  padding: 20px;
+  margin: 0 100px;
+  margin-top: 0.5%;
+}
+
+/* Heading */
+.all-properties h2 {
+  font-family: "Gotham", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  color: #213644;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px #00000040;
+  margin: 0;
+}
+
+.all-properties header {
+  display: flex;
+  justify-content: space-between; /* To push the button to the right */
+  align-items: center;
+}
+
+/* View all button */
+/* .view-all-button {
+  background-color: #213644;
+  color: white;
+  padding: 2px 7px;
+  border-radius: 5px;
+  text-decoration: none;
+} */
+
+/* Image container */
+.image-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 4%;
+  overflow-x: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/* All property items */
+.all-item {
+    position: relative;
+  text-align: center;
+  flex: 1;
+  max-width: 16%;
+  margin-bottom: 2%;
+}
+
+/* Image */
+.all-item img {
+  width: 100%;
+  height: 20rem;
+  border-radius: 5px, 0px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease; 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.24) 5%, rgba(105, 105, 105, 0.262) 25%);
+  pointer-events: none;
+  transition: opacity 0.3s ease; /* Add a smooth transition */
+}
+
+.all-item:hover .overlay {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 5%, rgba(134, 116, 85, 0.22) 25%);
+    border-radius: 5px;
+  }
+
+/* Text below the image */
+.all-item p {
+  margin: 0;
+  padding: 10px 0;
+  font-family: "Gotham", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #213644;
+}
+
+/* whole document edit */
+html {
+  background-repeat: no-repeat;
+  background-color: #e3e3e3;
+}
+/* scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c6ab7c;
+  border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #213644;
+  border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1f3241;
+}

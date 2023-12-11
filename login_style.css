@@ -1,0 +1,140 @@
+/* Import Inter Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/gotham-6");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap");
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+/* Apply a background image */
+body {
+    background-image: url("./images/OCRw.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Inter", Tahoma, sans-serif, sans-serif;
+    color: #c6ab7c;
+}
+
+/* Center the login container vertically and horizontally */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#placeholder{
+    font-size: 15px;
+}
+/* Style the login container */
+.login_container {
+    border-radius: 8px;
+    padding: 30px; /* Added padding */
+    margin: 20px; /* Added margin */
+    text-align: center;
+
+}
+
+/* Login overlay section */
+#loginOverlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color:none;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+
+.login_form {
+    padding: 20px;
+    margin: 20px auto; /* Added margin */
+    border-radius: 5px;
+}
+
+/* Style the close button */
+.close_button {
+    font-size: 20px;
+    text-decoration: none;
+    color: #c6ab7c;
+    cursor: pointer;
+}
+
+/* Style the close button on hover */
+.close_button:hover {
+    color: #213644;
+}
+
+.login_form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the submit button */
+.login_form button {
+    background-color: #c6ab7c;
+    color: white;
+    padding: 10px 20px; /* Added padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px; /* Added margin */
+}
+
+.login_form button:hover {
+    background-color: #213644;
+}
+
+/* Style the form inputs and labels */
+.login_form label {
+    color: #c6ab7c;
+    font-weight: bold; /* Added font-weight for labels */
+}
+
+.login_form input[type="text"],
+.login_form input[type="password"] {
+    border: 1px solid #c6ab7c;
+    background-color: transparent;
+    color: #d6ba89;
+    font-weight: bold;
+    padding: 10px; /* Added padding */
+    margin: 10px 0; /* Added margin */
+}
+
+ 
+@media (max-width: 768px){
+    .login_container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      
+    #loginOverlay {
+        width: 80%;
+      }
+    
+}
+
+@media (max-width: 468px){
+    .login_container {
+        padding: 10px;
+        top: 60%;
+    }
+    #loginOverlay {
+        top: 67%;
+    }
+
+    
+} 

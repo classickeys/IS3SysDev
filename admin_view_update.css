@@ -1,0 +1,553 @@
+/* Import Inter Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.cdnfonts.com/css/gotham-6');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap');
+
+
+
+/* Reset default margin and padding */
+body, h1, h2, h3, label , .content-container p, form, button {
+    margin: 2%;
+    padding: 2%;
+}
+
+/* Set font and background colors */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #e3e3e3;
+    color: #223644;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+/* Style the header */
+header {
+    background-color: #c6ab7c;
+    color: #FFFFFF;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+/* navbar  */
+nav ul {
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    list-style-type: none;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    background-color: #213644;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 0.8s ease;
+    opacity: 1;
+    z-index: 1000;
+  }
+  /* scroling effect */
+  #navbar.hidden {
+    opacity: 0; /* Hidden */
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+  }
+  
+  /* all links in nav bar */
+  nav a {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 13px;
+    text-align: center;
+  }
+  
+  /* left section with home button */
+  .left a {
+    width: auto;
+    position: relative;
+    transform: none;
+    margin-left: 10px; /* Adjust the margin as needed */
+  }
+  
+  /* right section float */
+  .right {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 15px; /* Adjust the margin as needed */
+    justify-content: space-between;
+  }
+  
+  /* right section with 3 links */
+  .right a {
+    width: auto;
+    position: relative;
+    margin-left: 10px;
+    transform: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+  }
+  
+  /* images in each button */
+  .right img {
+    margin-left: auto;
+  }
+  
+  /* Centered section inside the top navigation */
+  
+  .searchContainer {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 9px 12px;
+    border: none;
+    border-radius: 13px;
+    outline: none;
+    background-color: #c6ab7c;
+    color: #213644;
+    transition: background-color 0.3s ease;
+    display: none;
+    vertical-align: middle;
+  
+    text-align: center;
+  }
+  
+  .searchInput:hover {
+    background-color: #213644;
+    color: #867455;
+    border-radius: 13px;
+    border-color: #c6ab7c;
+    border-width: 2px;
+    border-style: solid;
+  }
+  
+  .center a {
+    position: relative;
+    transform: none;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+  
+    vertical-align: middle;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  /* the image inside the search box */
+  .center a img {
+    margin-left: auto;
+  }
+  
+  /* CSS for the search input field */
+  
+  /* home image */
+  #home {
+    object-fit: contain;
+    position: fixed;
+    width: fit-content;
+  }
+  
+  /* the buttons on the right Login Alerts and Review */
+  .navBtn {
+    background-color: #c6ab7c;
+    color: #213644;
+    border-radius: 13px;
+    height: 20px;
+    width: auto;
+    padding: 8px 12px;
+  }
+
+  /* Style the search and clear search buttons */
+.search-buttons {
+  text-align: center;
+  margin-top: 1%;
+}
+
+
+  /* the search button area */
+  #search {
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    background-color: #213644;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #e3e3e3;
+  }
+  
+  /* search button hover */
+  
+  .navBtn:hover,#search:hover {
+    background-color: #e3e3e3;
+    border-radius: 13px;
+    color: #213644;
+    border-color: #e3e3e3;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+  /* hover on search button */
+  .searchBtn:hover {
+    #search_icon {
+      content: url(./images/icons/searchH.png);
+    }
+  }
+  
+  #search_submit {
+    display: none;
+  }
+  
+  /* hover on home image button */
+  #homeBtn:hover {
+    #home_png {
+      border-color: #c6ab7c;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 25px;
+    }
+  }
+  
+  /* hover on right buttons */
+  #loginBtn:hover {
+    #login_png {
+      content: url(./images/icons/arrowH.png);
+    }
+  }
+  
+/* Main container */
+main {
+    margin-top: 100px;
+    margin-bottom: 10%; 
+    max-width: 90%;
+    height: auto;
+    padding: 3%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling when content overflows s */
+    align-items: center;
+    text-align: center;
+}
+
+.filter-line{
+    font-weight: bold;
+}
+
+
+/* Content container */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Add a wrapper around the table to prevent overflow */
+.table-wrapper {
+    overflow-x: auto;
+    max-width: 100%; /* Ensure table takes full width of the container */
+}
+table, th, td, tr{
+    border-collapse: collapse;
+}
+
+/* Left-align (justify) table cell contents */
+table {
+    width: 100%; /* Ensure the table takes full width of the container */
+}
+
+table th,
+table td {
+    text-align: center; /* Left-align table cell contents */
+    border-bottom: 1px solid #223644;
+}
+table th{
+    padding: 20px;
+    color: black;
+    border: none;
+}
+
+table tr:nth-child(n){
+    padding-bottom: 2%;
+}
+
+table tr:last-child{
+    border-bottom: none;
+}
+/* Form styling */
+.form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #223644;
+    border-radius: 5px;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Label styling for alignment */
+form label {
+    margin-bottom: 5px;
+    color: #223644;
+    text-align: left; /* Align labels to the left */
+}
+
+/* Form input styling */
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form input[type="tel"],
+form input[type="file"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #223644;
+    border-radius: 3px;
+    background-color: #e3e3e3;
+}
+
+
+/* Style the default checkbox */
+input[type="checkbox"] {
+  /* Set the desired size for the checkbox */
+  width: 2%;
+  height: 2%;
+  
+}
+
+
+
+/* File input styling */
+form input[type="file"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #223644;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+}
+
+/* Submit button styling */
+form input[type="submit"] {
+    background-color: #213644;
+    color: #e3e3e3;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 1%;
+    font-size: 12px;
+}
+
+/* Submit button styling */
+form input[type="submit"]:hover {
+  background-color: rgba(227, 227, 227, 0.7);
+  color: #213644;
+  
+  cursor: pointer;
+  
+}
+
+.link{
+  background-color: #213644;
+  color: #e3e3e3;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 1%;
+  margin-left: 1%;
+  font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Clear button styling */
+#clearForm {
+    background-color: #213644;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* Styles for layout below the search bar */
+#filter_active,
+#filter_inactive,
+label[for="filter_active"],
+label[for="filter_inactive"],
+input[type="submit"][name="search_submit"],
+input[type="submit"][name="clear"] {
+    margin-right: 2%; /* Add margin between elements */
+}
+
+/* Adjust the "Back" button */
+#profile_edit_back {
+  background-color: #213644; 
+  font-size: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  color: #e3e3e3;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  float: left;
+  
+}
+
+#profile_edit_back:hover {
+  background-color: rgba(227, 227, 227, 0.7);
+  
+  color: #213644;  
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  
+}
+
+
+/* Style the line containing filter elements */
+.filter-line {
+  text-align: center;
+  margin-top: 2%; /* Add margin above the line */
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.content_container h1 , .content_container h2, .content_container h3{
+  font-family: "Gotham", sans-serif;
+  text-transform: uppercase;
+}
+
+tbody{
+  font-size: 11px;
+}
+  
+/* footer element */
+footer  {
+    width: 100%;
+    position: relative;
+    list-style-type: none;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    color:#213644;
+}
+  
+footer small{
+    display: block;
+    padding-bottom: 15px;
+    align-items: center;
+}
+  
+  /* footer paragragh */
+footer p {
+    height: 30px;
+    padding-top: 0.5%;
+    font-weight: 200;
+    background-color: #213644;
+    text-align: center;
+    width: auto;
+    border-radius: 20px;
+    color:white;
+    position: relative;
+    font-size: 12px;
+}
+  
+/* links in footer */
+footer small a {
+    margin-right: 50px;
+    top: 50%;
+    font-size: 12px;
+}
+
+/*FOOTER LINK CODE*/
+/* unvisited link */
+footer small a:link {
+    color: #213644;
+}
+/* visited link */
+footer small a:visited {
+    color: black;
+}
+/* mouse over link */
+footer small a:hover {
+    color: #c6ab7c;
+    font-size: 13px;
+}
+/* selected link */
+footer small a:active {
+    color: #213644;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    /* Center the filter labels and checkboxes */
+    .filter-line {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .filter-line label,
+    .filter-line input[type="checkbox"] {
+        margin: 0 10px; /* Add some spacing between them */
+    }
+    
+    /* Center the search and clear buttons */
+    .button-line {
+        text-align: center;
+    }
+    
+    .button-line input[type="submit"] {
+        display: block;
+        margin: 0 auto; /* Center horizontally */
+    }
+}
+/* scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c6ab7c; 
+  border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb{
+  background: #213644; 
+  border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1f3248; 
+}
+
+
+

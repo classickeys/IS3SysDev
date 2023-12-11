@@ -1,0 +1,192 @@
+/* Import Inter Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/gotham-6");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap");
+
+
+body {
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+#agents_control_centre, #manage_listings, #manage_tenant, #my_profile{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 40px;
+}
+
+h1{
+    margin: 40px;
+}
+body {
+    font-family: "Gotham",Arial, sans-serif;
+}
+
+form, .controls {
+    max-width: 450px;   /*change to 400px for half a window*/
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+#my_profile {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    margin: 0 auto;
+}
+#my_profile {
+    text-align: center; /* Center-align the entire profile card */
+}
+
+#profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align child elements horizontally */
+    padding: 20px;
+}
+
+#profile-picture{
+    width: 300px; /* Adjust the size of the profile picture as needed */
+    height: 300px; /* Adjust the size of the profile picture as needed */
+    overflow: hidden; /* Clip any overflowing image */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center; /* Center-align content horizontally */
+    align-items: center; /* Center-align content vertically */
+    background-color: #f0f0f0; /* Background color for the profile picture */
+}
+
+#profile-picture img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Resize image to cover the entire container */
+}
+
+#profile-details {
+    text-align: center; /* Center-align text within the details section */
+    margin-top: 10px;
+}
+
+.link, #profile_edit_back, #clearForm, #add_listing_back{
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.link:hover, #profile_edit_back:hover, #clearForm:hover, #add_listing_back:hover{
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+form, .controls {
+    max-width: 900px;   /*change to 400px for half a window*/
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"], 
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.submit{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.submit:hover {
+    background-color: #0056b3;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container select,
+.form-container textarea,
+.form-container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container input[type="radio"] {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
