@@ -1,6 +1,6 @@
 <?php
-    define("SERVERNAME", "is3-dev.ict.ru.ac.za");
-    define("USERNAME", "TheA_team");
-    define("PASSWORD", "TheA_team");
-    define("DATABASE", "thea_team");
+    define("SERVERNAME", "sql107.byetcluster.com");
+    define("USERNAME", "if0_35600039");
+    define("PASSWORD", "b3v62p4f");
+    define("DATABASE", "if0_35600039_Thea_team");
 ?>

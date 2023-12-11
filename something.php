@@ -328,7 +328,7 @@
                     <!--<a href="./admin_edit_profile.php" id="clearForm">Clear</a>-->
                 </form>
                 <!-- Back button
-                <a href="/sysDev/thea_team/index.php" id="profile_edit_back" style="background-color: #867455;
+                <a href="/sysDev/if0_35600039_Thea_team/index.php" id="profile_edit_back" style="background-color: #867455;
                 color: #FFFFFF; padding: 8px 12px; cursor: pointer; border-radius: 5px; 
                 text-decoration: none; text-align: center;">Back to Home</a> -->
             </div>

@@ -251,7 +251,7 @@
         $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) or die("Failed to connect to Database");
         // imgQuery
         // total of entries
-        $nb_query = "SELECT * FROM thea_team.main_pictures";
+        $nb_query = "SELECT * FROM if0_35600039_Thea_team.main_pictures";
 
         $nb_result = mysqli_query($conn, $nb_query) or die("database query has failed");
         $nb = 0;
@@ -264,7 +264,7 @@
 
 
         // query images
-        $img_query = "SELECT * FROM thea_team.main_pictures, thea_team.accomodation WHERE thea_team.accomodation.AccomodationID = thea_team.main_pictures.AccomodationID  ";
+        $img_query = "SELECT * FROM if0_35600039_Thea_team.main_pictures, if0_35600039_Thea_team.accomodation WHERE if0_35600039_Thea_team.accomodation.AccomodationID = if0_35600039_Thea_team.main_pictures.AccomodationID  ";
         $img_result = mysqli_query($conn, $img_query) or die("database query has failed");
         $count = 0;
         $accomID;
@@ -382,7 +382,7 @@
 
                         $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) or die("Failed to connect to the database!");
 
-                        $trending_query = "SELECT * FROM thea_team.main_pictures, thea_team.accomodation WHERE thea_team.accomodation.AccomodationID = thea_team.main_pictures.AccomodationID ORDER BY ViewCount DESC";
+                        $trending_query = "SELECT * FROM if0_35600039_Thea_team.main_pictures, if0_35600039_Thea_team.accomodation WHERE if0_35600039_Thea_team.accomodation.AccomodationID = if0_35600039_Thea_team.main_pictures.AccomodationID ORDER BY ViewCount DESC";
                         $trending_result = mysqli_query($conn, $trending_query) or die(mysqli_error($conn));
                         
                         $count = 1;

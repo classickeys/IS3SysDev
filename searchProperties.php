@@ -348,10 +348,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) or die("Failed to connect to the database");
 
                 //query
-                // $query_img = "SELECT * FROM thea_team.main_pictures, thea_team.accomodation WHERE thea_team.accomodation.AccomodationID = thea_team.main_pictures.AccomodationID";
+                // $query_img = "SELECT * FROM if0_35600039_Thea_team.main_pictures, if0_35600039_Thea_team.accomodation WHERE if0_35600039_Thea_team.accomodation.AccomodationID = if0_35600039_Thea_team.main_pictures.AccomodationID";
                 $query_img = "SELECT a.*, p.PhotoPath 
                                 FROM accomodation AS a
-                                INNER JOIN thea_team.main_pictures AS p 
+                                INNER JOIN if0_35600039_Thea_team.main_pictures AS p 
                                 ON a.AccomodationID = p.AccomodationID
                                 WHERE (a.Name LIKE '%$searchTerm%' OR a.Description LIKE '%$searchTerm%' OR a.Address LIKE '%$searchTerm%')";
 

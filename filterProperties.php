@@ -288,38 +288,38 @@
                 $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) or die("Failed to connect to the database");
 
                 //query
-                $query_img = "SELECT * FROM thea_team.main_pictures, thea_team.accomodation WHERE thea_team.accomodation.AccomodationID = thea_team.main_pictures.AccomodationID";
+                $query_img = "SELECT * FROM if0_35600039_Thea_team.main_pictures, if0_35600039_Thea_team.accomodation WHERE if0_35600039_Thea_team.accomodation.AccomodationID = if0_35600039_Thea_team.main_pictures.AccomodationID";
 
                 ////// append query for id if REQUEST[];
                 if ($type != 'All Properties') {
                     $words = explode(" ", $type);
                     switch ($words[0]) {
                         case "Houses":
-                            $query_img = $query_img ." AND thea_team.accomodation.Type = 'House'";
+                            $query_img = $query_img ." AND if0_35600039_Thea_team.accomodation.Type = 'House'";
                             break;
                         case "Bachelor":
-                            $query_img = $query_img ." AND thea_team.accomodation.Bedrooms = 1 AND thea_team.accomodation.Type = 'Single'";
+                            $query_img = $query_img ." AND if0_35600039_Thea_team.accomodation.Bedrooms = 1 AND if0_35600039_Thea_team.accomodation.Type = 'Single'";
                             break;
                         case "Apartment":
-                            $query_img = $query_img ." AND (thea_team.accomodation.Bedrooms < 4 AND (thea_team.accomodation.Type = 'Single' OR Type = 'Sharing'))"  ;
+                            $query_img = $query_img ." AND (if0_35600039_Thea_team.accomodation.Bedrooms < 4 AND (if0_35600039_Thea_team.accomodation.Type = 'Single' OR Type = 'Sharing'))"  ;
                             break;
                         case "Cottage":
-                            $query_img = $query_img ." AND thea_team.accomodation.Bedrooms = 1 AND thea_team.accomodation.Type = 'House'";
+                            $query_img = $query_img ." AND if0_35600039_Thea_team.accomodation.Bedrooms = 1 AND if0_35600039_Thea_team.accomodation.Type = 'House'";
                             break;
                         case "Modern":
-                            $query_img = $query_img ." AND thea_team.accomodation.Modern = 1 ";
+                            $query_img = $query_img ." AND if0_35600039_Thea_team.accomodation.Modern = 1 ";
                             break;
                         case "Furnished":
-                            $query_img = $query_img ." AND thea_team.accomodation.Furnished = 'Yes' ";
+                            $query_img = $query_img ." AND if0_35600039_Thea_team.accomodation.Furnished = 'Yes' ";
                             break;
                         case "Non-Furnished":
-                            $query_img = $query_img ." AND thea_team.accomodation.Furnished = 'No' ";
+                            $query_img = $query_img ." AND if0_35600039_Thea_team.accomodation.Furnished = 'No' ";
                             break;
                         case "Wifi":
-                            $query_img = $query_img ." AND thea_team.accomodation.Wifi = 1";
+                            $query_img = $query_img ." AND if0_35600039_Thea_team.accomodation.Wifi = 1";
                             break;
                         default:
-                        $query_img = $query_img ." AND thea_team.accomodation.Water = 1";
+                        $query_img = $query_img ." AND if0_35600039_Thea_team.accomodation.Water = 1";
                         break;
 
                     }

@@ -2,7 +2,7 @@
     require_once('config.php');
 
     //connect to the db
-    $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABSE) 
+    $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) 
     or die('<script type="text/javascript">alert("Failed To Connect to our Server/Database. Please try Again Later!")</script>');
 
     if(isset($_POST['myrole'])){
