@@ -837,7 +837,7 @@ mysqli_close($conn);
 
                                     // Create and execute the SQL query to fetch agent data
                                     $a_query = "SELECT AVG(TAR.Final_Rating) AS AVGRating
-                                    FROM tenants_accomodation_rating TAR
+                                    FROM if0_35600039_Thea_team.tenants_accomodation_rating TAR
                                     WHERE TAR.AccomodationID = '$accid'
                                     ";
 
