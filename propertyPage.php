@@ -8,6 +8,7 @@ $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE)
 // Increment the view count for the viewed accommodation
 if (isset($_REQUEST['accommodationid'])) {
     $accommodationID = $_REQUEST['accommodationid']; //passed via URL
+    define("ACCOMODATION", $accommodationID);
     $incrementViewsQuery = "UPDATE accomodation SET ViewCount = (ViewCount + 1) WHERE AccomodationID = '$accommodationID'";
     mysqli_query($conn, $incrementViewsQuery) or die(mysqli_error($conn));
 }
@@ -619,8 +620,44 @@ mysqli_close($conn);
                         <div class="ig inner3">
 
 
+                                    
+
                                 <h3>Agent Details</h3>
-                                <?php if ($rating) { ?>
+                                <?php 
+                                require_once("config.php");
+
+                                $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE)
+                                    or die('<script type="text/javascript">alert("Error 0:" . mysqli_error($conn))</script>');
+                                
+                                    $accomodation_idd = ACCOMODATION;
+                                    $a_query = "SELECT AgentID from if0_35600039_Thea_team.agent_accomodation WHERE AccomodationID = '$accommodationID'";
+                                    $a_result = mysqli_query($conn, $a_query);
+
+                                    $arating = mysqli_fetch_assoc($a_result);
+                                    $agentsID = $arating['AgentID'];
+                                    $r_query = "SELECT * from agent WHERE agent.AgentID = '$agentsID'";
+                                    $r_result = mysqli_query($conn, $r_query);
+
+                                    
+
+                                    $rating = mysqli_fetch_assoc($r_result);
+
+                                     $q_query = "SELECT AVG(TAR.Rating_Value) AS AVGRating
+                                     FROM if0_35600039_Thea_team.tenants_agent_rating TAR
+                                     WHERE TAR.AgentID = '$agentsID'
+                                     ";
+
+                                     $q_result = mysqli_query($conn, $q_query);
+
+                                    if($q_result && mysqli_num_rows($q_result) > 0){
+                                         $rrating = mysqli_fetch_assoc($q_result);
+                                         $stars = displayStars($rrating['AVGRating']);
+                                    } else {
+                                         $stars = displayStars(0);
+                                     }
+                                
+                                
+                                if ($rating) { ?>
                                     <div class="profile-card">
                                         <!-- Agent's Profile Picture and Details -->
                                         <div id="profile-picture">

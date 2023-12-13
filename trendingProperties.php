@@ -345,7 +345,7 @@
 
                     $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) or die("Failed to connect to the database!");
 
-                    $query_img = "SELECT * FROM if0_35600039_Thea_team.main_pictures, if0_35600039_Thea_team.accomodation WHERE if0_35600039_Thea_team.accomodation.AccomodationID = thea_team.main_pictures.AccomodationID";
+                    $query_img = "SELECT * FROM if0_35600039_Thea_team.main_pictures, if0_35600039_Thea_team.accomodation WHERE if0_35600039_Thea_team.accomodation.AccomodationID = if0_35600039_Thea_team.main_pictures.AccomodationID";
                     
                     ////// append query for id if REQUEST[];
                     if ($type != 'All Properties') {

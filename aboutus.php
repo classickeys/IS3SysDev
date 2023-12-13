@@ -248,13 +248,13 @@
         <p><i>Live, Learn, Love.</i></p>
       </div>
       <div class="person">
-        <img src="./profile_pictures/denzel.jpeg" alt="Person 3">
+        <img src="./profile_pictures/denzel.jpg" alt="Person 3">
         <h2>Denzel Matapuri</h2>
         <p>Lead Back-End Developer</p>
         <p><i>Faithfully serving the season you are in, always produces results!!</i></p>
       </div>
       <div class="person">
-        <img src="./profile_pictures/rinae.jpg" alt="Person 4">
+        <img src="./profile_pictures/rinaee.jpg" alt="Person 4">
         <h2>Rinae Makhado</h2>
         <p>Design Co-ordinator</p>
         <p><i>I can do all things through Christ who strengthens me.</i></p>
