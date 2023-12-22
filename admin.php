@@ -1,6 +1,26 @@
 <?php
     //secure.php: file that has session verification
     require_once("secure.php");
+
+
+    function generate_password(){
+        // Characters that can be included in the random string
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        // Length of the random string
+        $length = 10;
+
+        // Initialize the random string
+        $random_password = '';
+
+        // Generate a random string
+        for ($i = 0; $i < $length; $i++) {
+            //make the password by taking one random index from the string $characters, and appending it to the $random_password variable
+            $random_password .= $characters[rand(0, strlen($characters) - 1)];
+        }
+        //return the new password
+        return $random_password;
+    }
     
     // Check if the UserID is stored in the session
     if (isset($_SESSION["user_id"])) {
@@ -307,24 +327,7 @@
         }
     }
 
-    function generate_password(){
-        // Characters that can be included in the random string
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-        // Length of the random string
-        $length = 10;
-
-        // Initialize the random string
-        $random_password = '';
-
-        // Generate a random string
-        for ($i = 0; $i < $length; $i++) {
-            //make the password by taking one random index from the string $characters, and appending it to the $random_password variable
-            $random_password .= $characters[rand(0, strlen($characters) - 1)];
-        }
-        //return the new password
-        return $random_password;
-    }
+    
 
     mysqli_close($conn);
 ?>
