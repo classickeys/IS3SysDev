@@ -370,8 +370,9 @@
 
     <!-- trending this week section  -->
     <section class="trending-section">
+    <p>Demo Agent Login: A24A7239 Password: H3DuraWuin</p>
+
         <header>
-            <h2>Demo Agent:  Login: A24A7239 Password: H3DuraWuin</h2><br>
             <h2>Trending Properties</h2> 
             <a href="trendingProperties.php" class="view-all-button">View All</a>
         </header>
